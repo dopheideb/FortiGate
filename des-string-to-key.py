@@ -32,7 +32,7 @@ def DES_string_to_key(string, as_hex=False):
 		raise ValueError("Unsupported input type")
 
 	## A DES key is 8 octets (64 bits).
-	key = bytearray(b'\x00') * 8
+	key = bytearray(8)
 	
 	for i,j in enumerate(input):
 		if i % 16 < 8:
@@ -68,7 +68,7 @@ def DES_string_to_key(string, as_hex=False):
 	return key_hex
 
 if __name__ == '__main__':
-	if len(sys.argv) == 1
+	if len(sys.argv) == 1:
 		input = sys.stdin.read()
 	else:
 		input = sys.argv[1]
